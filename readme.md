@@ -3,6 +3,7 @@
 # Linked List
 
 ****
+
 **Creating a Linked List From an array**
 The logic behing is to
 1. CREATE OR ASSIGN HEAD SEPERATELY
@@ -14,11 +15,13 @@ The logic behing is to
    AND NOW MAKE THE NEXT NODE TO CURRENT NODE
    }
 3. LOOP ENDS THEN RETURN HEAD
+   
 **Deleting a head**
 1. FIRST CHECK FOR THE LL FOR NULL FOR NO NEXT AND RETURN NEXT OR NULL RESP.
 2. ASSIGN TEMP REFERENCE FOR HEAD (so that we still have the head to riginal ll)
 3. HEAD = HEAD.NEXT
 4. NOTE-: In C++ we might had to delete the head but the garabage collection does that for us in java
+   
 **Deleting a tail**
 1. EDGE CASES -: one node or no node
 2. temp = head
@@ -26,6 +29,7 @@ The logic behing is to
    temp = temp.next
    }
    temp.next = null
+   
 **Deleting any general posistion**
 [Note]()
 This covers all the cases
@@ -43,5 +47,6 @@ THEN -> HEAD {HEAD = HEAD.NEXT}
    prevTotemp = temp;
    temp = temp.next;
    }
+   
 **Deleting using value**
 [Note]()-: if (temp.data == val)
