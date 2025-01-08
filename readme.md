@@ -129,7 +129,7 @@ then add node at that pos
 
 **NOTE** - in insertion and deletion general just pos cover the edge for the head and the left algorithm handles the tail;
 
-**[Lenght and file element]()**
+**[Lenght and find element]()**
 
 To find the length or add an element 
 
