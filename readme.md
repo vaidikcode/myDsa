@@ -1,6 +1,5 @@
 # My Dsa Rev
 
-****
 # Linked List
 
 ****
