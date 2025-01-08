@@ -52,7 +52,7 @@ The logic behing is to
    
 **[Deleting any general position]()**
 
-[Note]() This covers all the cases
+**Note** This covers all the cases
 
 THE MAIN THING IS TO COVER THE EDGE CASES AND THEN THINK OF THE ALGORITHM
 
@@ -82,6 +82,6 @@ THEN -> HEAD {HEAD = HEAD.NEXT}
    
    }
    
-**Deleting using value**
+**[Deleting using value]()**
 
-[Note]()-: if (temp.data == val)
+**Note**-: if (temp.data == val)
