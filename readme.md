@@ -2,7 +2,7 @@
 
 # Linked List
 
-****
+******
 
 **[Creating a Linked List From an array]()**
 
@@ -81,7 +81,8 @@ THEN -> HEAD {HEAD = HEAD.NEXT}
          temp = temp.next;
          
          }
-   
+******
+
 **[Deleting using value]()**
 
 **Note**-: if (temp.data == val)
