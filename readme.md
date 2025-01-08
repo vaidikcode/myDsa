@@ -6,9 +6,9 @@
 
 **[Creating a Linked List From an array]()**
 
-The logic behing is to
+The logic behind is to
 
-         1. CREATE OR ASSIGN HEAD SEPERATELY
+         1. CREATE OR ASSIGN HEAD SEPARATELY
    
          2. FOR LOOP FROM INDEX
             
@@ -81,8 +81,52 @@ THEN -> HEAD {HEAD = HEAD.NEXT}
          temp = temp.next;
          
          }
-******
+
 
 **[Deleting using value]()**
 
 **Note**-: if (temp.data == val)
+******
+**[Inserting at head]()**
+
+Just return new node and its next as head
+
+         return Node newHead = new Node(val, head);
+
+**[Inmserting at Tail]()**
+
+transverse tail 
+
+         temp.next == nil;
+
+then add node at that pos
+
+         temp.next = new Node(val, nil);
+
+**[Inserting at any General Pos]()**
+
+         If k == 1
+         
+                  return Node newHead = new Node(val, head);
+         
+         count = 0; temp =head; 
+         
+         while (temp != nul) {
+
+         if count = k-1 {
+
+                  new Node(val, temp.next)
+                  
+                  temp.next = new node
+
+                  break
+         
+         }
+
+         return head;
+         
+         }
+
+**NOTE** - in insertion and deletion general just pos cover the edge for the head and the left algorithm handles the tail;
+
+
