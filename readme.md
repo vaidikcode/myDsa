@@ -27,5 +27,5 @@ The logic behing is to
 3. WHILE (temp.next ka next != null) {
    temp = temp.next
    }
-   tail = temp
+   temp.next = null
 ****
