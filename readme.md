@@ -141,4 +141,141 @@ To find the length or add an element
          
          }
 
+# Double Linked List
+
+**[constructing dll from an arr]()**
+
+making head then starting the loop from arr[1]. the main idea here is assign prev to head
+
+in a loop
+
+create the nood by assing prev but next ass null
+
+then assign prev.next to current node
+
+then make the current node prev.
+
+         class Solution {
+         
+    Node constructDLL(int arr[]) {
+    
+        // Code here
+        
+        //the mian way is first make head
+        
+        Node head = new Node(arr[0]);
+        
+        //make it prev
+        
+        Node prev = head;
+        
+        // nil<-prev->nil
+        
+        for (int i =1; i <= arr.length-1; i++) {
+        
+        // make temp or current node
+        
+        // prev<-temp->nil
+        
+        Node current = new Node(arr[i]);
+        
+        current.next = null;
+        
+        current.prev = prev;
+        
+        // prev->curreny
+        
+        prev.next = current;
+        
+        //make the temp prev
+        
+        prev = current;
+        
+        }
+        
+       return head; 
+       
+    }
+    
+         }
+
+****
+
+**[deleting a node in dll]()**
+
+EDGE CASES ---> NULL DLL | AT ANY GENERAL POS ---->1.FOR HEAD
+                                                   2.FOR TAIL
+                                                   3.FOR GENERAL POS
+
+The thing is for null dll we just return null but for not null dll we try to iterate over temp != null  and breaking the loop at desired pos or value
+
+if the pos is 1 then handling edge case for head
+
+         head.next.prev == null;
+
+same for tail beacuse the null node next to tail should point to tailprev in general algo which cannot be handled by the general algo so need to be configure differently
+
+         tail.prev.next = null;
+
+         tail..prev = null;
+
+GENERAL POSE
+
+         temp.prev.next = temp.next;
+         
+         temp.next.prev = temp.prev;
+
+**[inserting a node at a pos]()**
+
+general ides is same the null should be handled and head and tail needs to be handled separately
+
+try to have prev in iteration.
+
+then assign prev to new node connections and same for tem's prev connection.
+
+****
+
+**[reversal DLL and return new head.]()**
+
+for loop
+
+consider temp to iterate and at every iteration reverse the pointers
+
+to think to notice is
+
+assign temp as new head every time
+
+temp should be incremente as = temp.prev;
+
+         class Solution {
+    public DLLNode reverseDLL(DLLNode head) {
+    //The main idea is to reverse the pointers only rather than creating a new Node;
+        
+        
+    // DLL ==  NIL
+    if (head == null) {
+        return null;
+    } 
+    // DLL REVERSING FOR GENERAL
+    // 1<->2<->3
+    DLLNode temp = head;
+    DLLNode newHead = null;
+
+    // Traverse the list and reverse the pointers
+        while (temp != null) {
+            // Swap prev and next pointers
+            DLLNode prev = temp.prev;
+            temp.prev = temp.next;
+            temp.next = prev;
+
+            // Update the new head (it will be the last non-null node)
+            newHead = temp;
+
+            // Move to the next node in the original sequence (now using prev)
+            temp = temp.prev;
+        }
+
+        return newHead;
+    }
+    }
 
