@@ -278,4 +278,66 @@ temp should be incremente as = temp.prev;
         return newHead;
     }
     }
+****
 
+# questions
+
+1. **MIDDLE NODE**
+
+         class Solution {
+   
+       public ListNode middleNode(ListNode head) {
+   
+        // EDGE CASES--> NULL DLL | NOT NULL-->
+
+        // NULL DLL
+   
+        if (head == null) {
+   
+            return null;
+   
+        }
+
+        //TWO CASES HERE--->
+   
+        //ODD NO OF ELEMENTS
+
+       //   |---|---|
+   
+       //   |-------|-------|
+    
+         // 1<->2<->3<->4<->5
+
+        //EVEN NO OF ELEMENTS
+
+        // NOT NULL
+   
+        ListNode temp2 = head;
+   
+        ListNode temp1 = head;
+   
+        while (temp2 != null) {
+   
+            if (temp2.next == null) {
+   
+                break;
+   
+            }
+   
+            temp2 = temp2.next.next;
+   
+            temp1 = temp1.next;
+   
+        }
+   
+        return temp1;
+   
+       }
+   
+       }
+
+There is a particular lag in play here the frognode is traversed by 2 nodes and it makes sure that the trortoisenode gets in the middle when the frog is at end or at tails next null
+
+the thing to notice is to stop temp to traverse 2points when its at tail by implying the condition temp2.next == null and hence breaking the loop if it does it will acess a null pointer exception as there is
+
+nothing next to tail's next
